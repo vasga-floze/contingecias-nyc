@@ -1,5 +1,5 @@
 # CONTINGENCIAS
-## COMO COMO CREAR USUARIOS PARA CONEXION REMOTA
+## COMO CREAR USUARIOS PARA CONEXION REMOTA
 Para que los usuarios conectados en la red puedan acceder al escritorio remoto, deben existir los usuarios en Active Directory.
 #### Los pasos para crear usuarios o verificar que existen los usuarios:
 * Paso 1: Ingresar  al Administrador del Servidor y luego al centro de administración de active directory
@@ -23,7 +23,7 @@ Para que los usuarios conectados en la red puedan acceder al escritorio remoto, 
  Ya se debería poder hacer el ingreso con ese usuario usando el escritorio remoto. REPETIR EL PROCESO PARA TODOS LOS USUARIOS NECESARIOS.
 
 
-## COMO CARGAR DE ARCHIVOS PARA SINCRONIZACION DE TIENDAS
+## COMO CARGAR ARCHIVOS PARA SINCRONIZACION DE TIENDAS
 Para poder hacer la carga de datos para la sincronización, es necesario tener:
   - La computadora HP color azul (Antes asignada a Pablo, debe ser en esa porque ahí están instalados los programas que se usan).
   - El excel con la información extraída de las tiendas. (Eduardo saca esa información de las tiendas, Pablo revisa que esté bien)
