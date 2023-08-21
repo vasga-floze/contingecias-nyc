@@ -36,11 +36,22 @@ Para poder hacer la carga de datos para la sincronización, es necesario tener:
 
 Normalmente el Excel que se va a cargar tiene 4 hojas: **DP, DPL, PP y AP**. (*Para poder cargarlo se debe tener cerrado el Excel, porque a veces se bloquea*).
 
- #### Cada una tiene la estructura de una tabla de la base de datos:
+ #### Cada una tiene la estructura de una tabla de la base de datos (Prefijo la Hoja de Excel y Nombre de la tabla):
 > * DP=DOCUMENTO_POS ---> Esta debe ser SIEMPRE la primera hoja en cargarse
 > * DPL=DOC_POS_LINEA
 > * PP=PAGO_POS
 > * AP=AUXILIAR_POS
 
+  Se va cargando una hoja a la vez, por ejemplo:
+  
+ > ![image](https://github.com/vasga-floze/contingecias-nyc/assets/72711545/74bacd9d-4f31-4972-acb5-8f9be5c3c550)
+ - Luego se debe dar clic en el botón cargar para que habilite el campo para la tabla en la que se va a cargar.
+ - Se debe relacionar con la información de prefijo y tabla mencionada anteriormente. Y luego dar clic en procesar.
+> ![image](https://github.com/vasga-floze/contingecias-nyc/assets/72711545/99ea9e51-6e01-45c3-8e48-f3e8bad4078a)
+ - Esto no se debe tocar (lo marcado en el cuadro rojo):
+> ![image](https://github.com/vasga-floze/contingecias-nyc/assets/72711545/3a4ff644-28db-4465-a227-bb7c01c2002c)
+-  Luego se debe hacer el resto de hojas siguiendo el mismo procedimiento, realizado en esta sección. Siempre con el esquema CONSNY.
+- **Nota: Cuando son todas las tiendas, DPL se tarda hasta 10 minutos**
 
+#### Despues de haber cargado la información se debe hacer la comprobación
 
