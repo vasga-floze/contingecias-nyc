@@ -55,3 +55,16 @@ Normalmente el Excel que se va a cargar tiene 4 hojas: **DP, DPL, PP y AP**. (*P
 
 #### Despues de haber cargado la información se debe hacer la comprobación
 
+## COMO CORREGIR ERROR 
+  * ### Falló el SetLocation: No se ha podido encontrar la tabla 'R_ASIENT'
+  ![image](https://github.com/vasga-floze/contingecias-nyc/assets/72711545/a92cebd8-a26b-49d5-9eb0-f17278c01fde)
+
+  #### Contexto: Puede suceder al querer previsualizar un reporte que se desea imprimir.
+* **Solución**:
+    * Buscar la carpeta que contiene el instalador de softland.
+     ![image](https://github.com/vasga-floze/contingecias-nyc/assets/72711545/bed771c3-ba63-422e-bff7-5b3001a0fa73)
+    * Buscar un exe que se llama Deploy Crystal y reinstalarlo.
+      *  ![image](https://github.com/vasga-floze/contingecias-nyc/assets/72711545/8821c87f-a698-4e2a-8e34-b8adb0143a5a)
+      *  ![image](https://github.com/vasga-floze/contingecias-nyc/assets/72711545/f51b76e6-b504-4d81-86c5-2fd4eba6c73d)
+    * Probar nuevamente a previsualizar el reporte, si no reiniciar la computadora e intentar nuevamente.
+
