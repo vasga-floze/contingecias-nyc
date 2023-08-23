@@ -68,3 +68,17 @@ Normalmente el Excel que se va a cargar tiene 4 hojas: **DP, DPL, PP y AP**. (*P
       *  ![image](https://github.com/vasga-floze/contingecias-nyc/assets/72711545/f51b76e6-b504-4d81-86c5-2fd4eba6c73d)
     * Probar nuevamente a previsualizar el reporte, si no reiniciar la computadora e intentar nuevamente.
 
+## COMO HACER RETACEOS
+- **Contexto inicial** , de gerencia financiera viene un archivo, que hasta que alguien de contabilidad revisa se puede procesar.
+- Cada pestaña del Excel corresponde a una compra de un contenedor, se supone que todos son de NYC pero hay que revisar los encabezados porque a veces hay de Carisma.
+- Alguien de contabilidad lo revisa y corrige, luego lo regresa con los valores de los gastos corregidos.
+- Hasta ese punto los nombres de los paquetes van en inglés y sin código.
+- Lo primero es identificar qué es, colocarle el código que le corresponde con su respectiva descripción.
+- Se puede tomar como base o idea el último correo correcto(mayo) enviado por Pablo desde la bandeja de salida.  Ahí están unas cosas que hacen unos cálculos para validar lo que de contabilidad mandan, aunque la validación se hace con un porcentaje, no es infalible pero da un parámetro.
+- La información de esos artículos está en la compañía NYC (no confundir con NEwYORK)... Si se encontrara algo que no está ahí, hay que crearle código nuevo.
+- Lo recibido de contabilidad se pone en la hoja RESUMEN del archivo anual, para que esté consolidado porque de repente hay que cruzarlo con contabilidad y es mejor ya tenerlo así, y si todo está bien lo voy separando en hojas individuales según el número de retaceo. parecido a como gerencia financiera lo manda, pero con otro orden y en español
+- En el archivo se puede ver que van hojas de colores por grupo. Cada grupo es un mes. Hay que ver los encabezados de cada hoja para ver que tengan el período correcto y el número de factura, ese número sale del encabezado del archivo que manda gerencia financiera.
+- Para crear un nuevo mes, sale más práctico copiar alguna de las hojas que ya está y se limpia para volverlo a llenar con la nueva información.
+> - *Un tip: borrar el contenido debajo del encabezado de la tabla sin llegar al total.*
+- *Y al final lo ordenar por la columna D (cantidad) de menor a mayor*
+  
