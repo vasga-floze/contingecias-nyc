@@ -46,7 +46,12 @@ Normalmente el Excel que se va a cargar tiene 4 hojas: **DP, DPL, PP y AP**. (*P
   
  > ![image](https://github.com/vasga-floze/contingecias-nyc/assets/72711545/74bacd9d-4f31-4972-acb5-8f9be5c3c550)
  - Luego se debe dar clic en el botón cargar para que habilite el campo para la tabla en la que se va a cargar.
- - Se debe relacionar con la información de prefijo y tabla mencionada anteriormente. Y luego dar clic en procesar.
+ - Se debe relacionar con la información de prefijo y tabla:
+     * DP=CONSNY.DOCUMENTO_POS
+     * DPL=CONSNY.DOC_POS_LINEA
+     * PP=CONSNY.PAGO_POS
+     * AP=CONSNY.AUXILIAR_POS
+ - Y luego dar clic en procesar.
 > ![image](https://github.com/vasga-floze/contingecias-nyc/assets/72711545/99ea9e51-6e01-45c3-8e48-f3e8bad4078a)
  - Esto no se debe tocar (lo marcado en el cuadro rojo):
 > ![image](https://github.com/vasga-floze/contingecias-nyc/assets/72711545/3a4ff644-28db-4465-a227-bb7c01c2002c)
