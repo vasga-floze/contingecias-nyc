@@ -73,7 +73,7 @@ Normalmente el Excel que se va a cargar tiene 4 hojas: **DP, DPL, PP y AP**. (*P
 > * ![image](https://github.com/vasga-floze/contingecias-nyc/assets/72711545/11ed029a-505c-46ae-a6ff-803f4b4e81a4)
 > * También dar la opción de repetir todas las etiquetas:
 > * ![image](https://github.com/vasga-floze/contingecias-nyc/assets/72711545/e6e6bce8-4db4-43ba-9315-5ebb7f5e42d1)
-- Luego para verificar se filtra por las tiendas que se han cargado, y se debe verificar que las columnas cuadro y ticket soincidan en la información.
+- Luego para verificar se filtra por las tiendas que se han cargado, y se debe verificar que las columnas cuadro y ticket coincidan en la información.
 - Si en la columna de ticket falta el dato, quiere decir que esa información no se ha sacado de la tienda todavía.
 
 
