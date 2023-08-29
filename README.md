@@ -59,6 +59,23 @@ Normalmente el Excel que se va a cargar tiene 4 hojas: **DP, DPL, PP y AP**. (*P
 - **Nota: Cuando son todas las tiendas, DPL se tarda hasta 10 minutos**
 
 #### Despues de haber cargado la información se debe hacer la comprobación
+- Para ello se debe buscar el script: 
+> ![image](https://github.com/vasga-floze/contingecias-nyc/assets/72711545/d83951e1-fc48-42ef-9f86-e72844e95113)
+- En el script hay que cambiar los rangos de fecha del primer día al último día del mes que se está cargando.
+- Una vez ejecutada la query se debe copiar con encabezados el resultado desde SQL a Excel.
+- Se debe armar una tabla dinámica con esos datos, se agrega:
+  -  Tienda y fecha como Filas.
+  -  Tipo como columna.
+  -  Monto como valores.
+- Luego se cambia el formato tabular:
+> * ![image](https://github.com/vasga-floze/contingecias-nyc/assets/72711545/e76779a3-3f25-4d9f-b735-f53c1784fa7a)
+> * Y que no muestre totales.
+> * ![image](https://github.com/vasga-floze/contingecias-nyc/assets/72711545/11ed029a-505c-46ae-a6ff-803f4b4e81a4)
+> * También dar la opción de repetir todas las etiquetas:
+> * ![image](https://github.com/vasga-floze/contingecias-nyc/assets/72711545/e6e6bce8-4db4-43ba-9315-5ebb7f5e42d1)
+- Luego para verificar se filtra por las tiendas que se han cargado, y se debe verificar que las columnas cuadro y ticket soincidan en la información.
+- Si en la columna de ticket falta el dato, quiere decir que esa información no se ha sacado de la tienda todavía.
+
 
 ## COMO CORREGIR ERROR 
   * ### Falló el SetLocation: No se ha podido encontrar la tabla 'R_ASIENT'
