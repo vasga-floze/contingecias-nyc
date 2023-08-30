@@ -59,8 +59,67 @@ Normalmente el Excel que se va a cargar tiene 4 hojas: **DP, DPL, PP y AP**. (*P
 - **Nota: Cuando son todas las tiendas, DPL se tarda hasta 10 minutos**
 
 #### Despues de haber cargado la información se debe hacer la comprobación
-- Para ello se debe buscar el script: 
-> ![image](https://github.com/vasga-floze/contingecias-nyc/assets/72711545/d83951e1-fc48-42ef-9f86-e72844e95113)
+- Para ello se debe ejecutar el script: 
+```
+USE EXIMP600;
+
+DECLARE @StartDate DATETIME = '2023-08-01 00:00';
+DECLARE @EndDate DATETIME = '2023-08-31 23:59';
+
+SELECT
+    CASE
+        WHEN E.TDA = 'BCSM' THEN 'SM4'
+        ELSE E.TDA
+    END AS TDA,
+    E.FECHA,
+    CONVERT(DECIMAL(18, 2), SUM(TOTAL_PAGAR)) MONTO,
+    E.CAJA,
+    'TICKET' AS TIPO
+FROM
+(
+    SELECT consny.DOCUMENTO_POS.DOCUMENTO,
+           LEFT(consny.DOCUMENTO_POS.DOCUMENTO, 3) AS TDA,
+           consny.DOCUMENTO_POS.TIPO,
+           consny.DOCUMENTO_POS.CAJA,
+           consny.DOCUMENTO_POS.CORRELATIVO,
+           RIGHT(consny.DOCUMENTO_POS.DOCUMENTO, 6) AS NUMERO,
+           CASE consny.DOCUMENTO_POS.TIPO
+               WHEN 'D' THEN TOTAL_PAGAR * -1
+               ELSE TOTAL_PAGAR
+           END AS TOTAL_PAGAR,
+           CASE
+               WHEN consny.DOCUMENTO_POS.documento LIKE '%R1%' THEN 'R1'
+               WHEN consny.DOCUMENTO_POS.documento LIKE '%R2%' THEN 'R2'
+               WHEN consny.DOCUMENTO_POS.documento LIKE '%R3%' THEN 'R3'
+               WHEN consny.DOCUMENTO_POS.documento LIKE '%R4%' THEN 'R4'
+               WHEN consny.DOCUMENTO_POS.documento LIKE '%R5%' THEN 'R5'
+               ELSE 'FAC'
+           END AS RESOLUCION,
+           CONVERT(DATE, consny.DOCUMENTO_POS.FCH_HORA_COBRO) AS FECHA,
+           consny.DOCUMENTO_POS.CAJERO AS TIENDA,
+           consny.CAJA_POS.BODEGA,
+           consny.DOCUMENTO_POS.NUM_CIERRE,
+           LEFT(consny.CAJA_POS.BODEGA, 1) AS EMPRESA,
+           MONTH(consny.DOCUMENTO_POS.FCH_HORA_COBRO) AS MES
+    FROM consny.DOCUMENTO_POS
+    INNER JOIN consny.CAJA_POS ON consny.DOCUMENTO_POS.CAJA = consny.CAJA_POS.CAJA AND consny.DOCUMENTO_POS.CAJA_COBRO = consny.CAJA_POS.CAJA
+    WHERE (consny.DOCUMENTO_POS.FCH_HORA_COBRO BETWEEN @StartDate AND @EndDate) AND (consny.DOCUMENTO_POS.ESTADO_COBRO = 'C')
+) AS E
+GROUP BY
+    CASE
+        WHEN E.TDA = 'BCSM' THEN 'SM4'
+        ELSE E.TDA
+    END,
+    E.FECHA,
+    e.caja
+
+UNION ALL
+
+SELECT USUARIOBODEGA.PREFIJODOC, CUADRO_VENTA.FECHA, CUADRO_VENTA.MONTO_SISTEMA, CUADRO_VENTA.CAJA, 'CUADRO'
+FROM CUADRO_VENTA
+INNER JOIN USUARIOBODEGA ON CUADRO_VENTA.BODEGA = USUARIOBODEGA.BODEGA AND CUADRO_VENTA.CAJA = USUARIOBODEGA.CAJA
+WHERE (CUADRO_VENTA.FECHA BETWEEN @StartDate AND @EndDate);
+```
 - En el script hay que cambiar los rangos de fecha del primer día al último día del mes que se está cargando.
 - Una vez ejecutada la query se debe copiar con encabezados el resultado desde SQL a Excel.
 - Se debe armar una tabla dinámica con esos datos, se agrega:
