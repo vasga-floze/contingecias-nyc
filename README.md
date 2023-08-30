@@ -102,5 +102,8 @@ Normalmente el Excel que se va a cargar tiene 4 hojas: **DP, DPL, PP y AP**. (*P
 - En el archivo se puede ver que van hojas de colores por grupo. Cada grupo es un mes. Hay que ver los encabezados de cada hoja para ver que tengan el período correcto y el número de factura, ese número sale del encabezado del archivo que manda gerencia financiera.
 - Para crear un nuevo mes, sale más práctico copiar alguna de las hojas que ya está y se limpia para volverlo a llenar con la nueva información.
 > - *Un tip: borrar el contenido debajo del encabezado de la tabla sin llegar al total.*
-- *Y al final lo ordenar por la columna D (cantidad) de menor a mayor*
+- *Y al final ordenar por la columna D (cantidad) de menor a mayor*
+
+## COMO GENERAR REPORTE PARA CUMPLIMIENTO
+
   
