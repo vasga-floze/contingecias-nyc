@@ -172,7 +172,7 @@ WHERE (CUADRO_VENTA.FECHA BETWEEN @StartDate AND @EndDate);
 > ![image](https://github.com/vasga-floze/contingencias-nyc/assets/72711545/3bde2e79-4481-4770-9464-0462987139b8)
 - Luego de haber identificado todas las líneas que corresponden a un CCF se debe completar la información en la segunda hoja(LOTE), se van a modificar las columnas que en su encabezado se han rellenado con color amarillo. La información que se va a reemplazar en dichas columnas está en la primera hoja.
 > ![image](https://github.com/vasga-floze/contingencias-nyc/assets/72711545/99800265-2b86-40a3-9c07-f3a7690bd546)
-- Al finalizar la hoja LOTE, se debe abrir TSQL y buscar en la base de datos: SOFTLAND, una tabla con el nombre: **CANNYSHOP.LOTE**, para insertar los registros directamente de la hoja de excel (sin los encabezados) a la tabla de la base de datos. **Es posible que aparezca un error de duplicados al insertar, pero no es problema, solo se puede dar en aceptar a la ventana.**
+- Al finalizar la hoja LOTE, se debe abrir SQLSMS y buscar en la base de datos: SOFTLAND, una tabla con el nombre: **CANNYSHOP.LOTE**, para insertar los registros directamente de la hoja de excel (sin los encabezados) a la tabla de la base de datos. **Es posible que aparezca un error de duplicados al insertar, pero no es problema, solo se puede dar en aceptar a la ventana.**
 - ![image](https://github.com/vasga-floze/contingencias-nyc/assets/72711545/4cff4416-b6d3-4b07-833f-40e1f91c3787)
 - Luego de haber insertado los lotes en la BD, se puede proceder con el registro de compras en Softland.
 - Las compras se registran en el módulo de compras > Operaciones > Ordenes:
@@ -182,7 +182,7 @@ WHERE (CUADRO_VENTA.FECHA BETWEEN @StartDate AND @EndDate);
 - Los campos marcados en la siguiente captura son los que se deben modificar, guardar y cerrar la ventana:
 > ![image](https://github.com/vasga-floze/contingencias-nyc/assets/72711545/df2e97b0-42ad-4eaa-81f2-e6d331f423d2)
 - Ahora se debe regresar al excel que se estaba trabajando e ir a modificar la tercera hoja (ORDEN_COMPRA_LINEA). Se van a modificar las columnas que en su encabezado se han rellenado con color amarillo. La información que se va a reemplazar en dichas columnas está en la primera hoja.
-- Al finalizar la hoja ORDEN_COMPRA_LINEA, se debe abrir TSQL y buscar en la base de datos: SOFTLAND, una tabla con el nombre: **CANNYSHOP.ORDEN_COMPRA_LINEA**, para insertar los registros directamente de la hoja de excel (sin los encabezados) a la tabla de la base de datos.
+- Al finalizar la hoja ORDEN_COMPRA_LINEA, se debe abrir el SQLSMS y buscar en la base de datos: SOFTLAND, una tabla con el nombre: **CANNYSHOP.ORDEN_COMPRA_LINEA**, para insertar los registros directamente de la hoja de excel (sin los encabezados) a la tabla de la base de datos.
 > ![image](https://github.com/vasga-floze/contingencias-nyc/assets/72711545/7cedb469-2325-4b3f-a13f-de7d12821a9a)
 - Ahora hay que volver a Softland y abrir nuevamente la orden de compra que se está trabajando.
 > ![image](https://github.com/vasga-floze/contingencias-nyc/assets/72711545/a80870c3-da73-45d5-b8d9-97f793f53779)
@@ -195,7 +195,54 @@ WHERE (CUADRO_VENTA.FECHA BETWEEN @StartDate AND @EndDate);
 - Continuar
 > ![image](https://github.com/vasga-floze/contingencias-nyc/assets/72711545/c4593121-1a01-4b01-ba1c-98a8be3a3f2e)
 ### Embarque
-- Después de aprobar la orden de compra, se procede a la creación del embarque.
+- Después de aprobar la orden de compra, se procede a la creación del embarque. Para ello se debe ir al módulo de compras > Operaciones > Embarques:
+> ![image](https://github.com/vasga-floze/contingencias-nyc/assets/72711545/cfaae31d-243b-4c58-95f7-1bdf3fdd08ae)
+- Hacer click en nuevo embarque:
+> ![image](https://github.com/vasga-floze/contingencias-nyc/assets/72711545/6002b51a-8bd3-4f94-8ecb-0281c219e48c)
+- Completar lo campos que se han marcado con el cuadro rojo, al finalizar guardar y salir:
+> ![image](https://github.com/vasga-floze/contingencias-nyc/assets/72711545/19dcc6be-8e7c-427c-813a-52ce3717956a)
+- Hacer clic en **cargar ordenes**:
+> ![image](https://github.com/vasga-floze/contingencias-nyc/assets/72711545/09703c77-18fc-4c56-9f5c-c76849bc71a3)
+-  Seleccionar en la ficha de filtro **la bodega y la orden** que se está cargando, luego en la ficha de **Líneas** seleccionar todas las fichas de la orden de compra y marcarlas con el cheque, luego hacer click en cargar y salir:
+> ![image](https://github.com/vasga-floze/contingencias-nyc/assets/72711545/0a255bff-a0ff-453b-96f7-8e49abbc8cda)
+- Continuar
+> ![image](https://github.com/vasga-floze/contingencias-nyc/assets/72711545/34a80aac-d613-417a-a374-26b2bb35cd4a)
+- Ahora se debe ir nuevamente al excel que se está trabajando para hacer la carga de los desgloses, pero primero se debe llenar la cuarta hoja (DET_LIN_EMBARQUE).  La información que se va a reemplazar en dichas columnas siempre está en la primera hoja.
+> ![image](https://github.com/vasga-floze/contingencias-nyc/assets/72711545/5f67911f-1bb1-452c-81ae-67df2c7bad3d)
+- Al tener lista la hoja DET_LIN_EMBARQUE se debe llevar a SQLSMS también para buscar la tabla CANNYSHOP.DET_LIN_EMBARQUE e insertar la data:
+> ![image](https://github.com/vasga-floze/contingencias-nyc/assets/72711545/c99e0e3e-1ca7-4bfb-9343-c68cd43aec09)
+- Volvemos a Softland y si está abierta la ventana de Embarque se cierra y se vuelve a abrir para que cargue la actualización en la ficha de los desgloses:
+> ![image](https://github.com/vasga-floze/contingencias-nyc/assets/72711545/642eb60d-1531-4d70-a23a-2b3bfdb2e7d9)
+- Se hace el recalculo:
+> ![image](https://github.com/vasga-floze/contingencias-nyc/assets/72711545/e14f05e3-76da-495b-8743-aea00af7fc7f)
+- Luego vamos a la ficha de Costos y en el menú superior damos click a **Refrescar costos**. (Tener cuidado que no sea el botón de aplicar a inventario). 
+> ![image](https://github.com/vasga-floze/contingencias-nyc/assets/72711545/64219f85-232c-49f9-a91e-2b1980a43c10)
+- Luego de **Refrescar costos** se debe GUARDAR y ahora se va a habilitar la ficha de Factura:
+> ![image](https://github.com/vasga-floze/contingencias-nyc/assets/72711545/ae98a26c-1755-4058-91e4-fe3efdbf75c6)
+- Configuración general de una factura:
+> ![image](https://github.com/vasga-floze/contingencias-nyc/assets/72711545/2241ff98-b33d-4074-9cbc-417d59b6db76)
+- Verificar que todas las lineas de desglose esten marcadas en la ficha de Lineas:
+> ![image](https://github.com/vasga-floze/contingencias-nyc/assets/72711545/755b4535-9bfe-4ea5-994c-fff1a5141c5e)
+- Continuar
+> ![image](https://github.com/vasga-floze/contingencias-nyc/assets/72711545/2d94ed40-59a1-44a3-ad91-68a7d68a6b55)
+- Se verifica contrastando con los CCF, que el importe y el Impuesto de Iva sea iguales. En caso de faltar o pasarse unos "centavitos" puede hacerse un ajuste, sumando o restando a algunas cantidades, las que sean más grandes de preferencia:
+> ![image](https://github.com/vasga-floze/contingencias-nyc/assets/72711545/8d780f6b-1038-4694-a2e9-9e3a11b6c186)
+- 
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 
 
