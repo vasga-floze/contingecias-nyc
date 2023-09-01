@@ -166,4 +166,35 @@ WHERE (CUADRO_VENTA.FECHA BETWEEN @StartDate AND @EndDate);
 ## COMO GENERAR REPORTE PARA CUMPLIMIENTO
 
 
-## COMO CARGAR ORDENES DE COMBRA Y EMBARQUE POR CCF
+## COMO CARGAR ORDENES DE COMPRA Y EMBARQUE POR CCF
+- Se tiene una plantilla de excel que en la primera hoja contiene el desglose de los fardos facturados. Se debe identificar las líneas que corresponden a cada CCF, para ir realizando las ordenes de compra por cada CCF. (Por ahora se debe filtrar por cada artículo y fecha, para comparar con los CCF que sí esten cuadrando).
+> ![image](https://github.com/vasga-floze/contingencias-nyc/assets/72711545/3bde2e79-4481-4770-9464-0462987139b8)
+- Luego de haber identificado todas las líneas que corresponden a un CCF se debe completar la información en la segunda hoja(LOTE), se van a modificar las columnas que en su encabezado se han rellenado con color amarillo. La información que se va a reemplazar en dichas columnas está en la primera hoja.
+> ![image](https://github.com/vasga-floze/contingencias-nyc/assets/72711545/99800265-2b86-40a3-9c07-f3a7690bd546)
+- Al finalizar la hoja LOTE, se debe abrir TSQL y buscar en la base de datos: SOFTLAND, una tabla con el nombre: CANNYSHOP.LOTE, para insertar los registros directamente de la hoja de excel (sin los encabezados) a la tabla de la base de datos. **Es posible que aparezca un error de duplicados al insertar, pero no es problema, solo se puede dar en aceptar a la ventana.**
+- ![image](https://github.com/vasga-floze/contingencias-nyc/assets/72711545/4cff4416-b6d3-4b07-833f-40e1f91c3787)
+- Luego de haber insertado los lotes en la BD, se puede proceder con el registro de compras en Softland.
+- Las compras se registran en el módulo de compras > Operaciones > Ordenes:
+> ![image](https://github.com/vasga-floze/contingencias-nyc/assets/72711545/673bca73-96f7-4a36-b903-c8583fef17c6)
+- Hacer click en nuevo
+> ![image](https://github.com/vasga-floze/contingencias-nyc/assets/72711545/9ef188f5-75ae-45d9-bb41-31a277bd2d06)
+- Los campos marcados en la siguiente captura son los que se deben modificar:
+> ![image](https://github.com/vasga-floze/contingencias-nyc/assets/72711545/df2e97b0-42ad-4eaa-81f2-e6d331f423d2)
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
