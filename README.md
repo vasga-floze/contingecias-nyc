@@ -171,15 +171,25 @@ WHERE (CUADRO_VENTA.FECHA BETWEEN @StartDate AND @EndDate);
 > ![image](https://github.com/vasga-floze/contingencias-nyc/assets/72711545/3bde2e79-4481-4770-9464-0462987139b8)
 - Luego de haber identificado todas las líneas que corresponden a un CCF se debe completar la información en la segunda hoja(LOTE), se van a modificar las columnas que en su encabezado se han rellenado con color amarillo. La información que se va a reemplazar en dichas columnas está en la primera hoja.
 > ![image](https://github.com/vasga-floze/contingencias-nyc/assets/72711545/99800265-2b86-40a3-9c07-f3a7690bd546)
-- Al finalizar la hoja LOTE, se debe abrir TSQL y buscar en la base de datos: SOFTLAND, una tabla con el nombre: CANNYSHOP.LOTE, para insertar los registros directamente de la hoja de excel (sin los encabezados) a la tabla de la base de datos. **Es posible que aparezca un error de duplicados al insertar, pero no es problema, solo se puede dar en aceptar a la ventana.**
+- Al finalizar la hoja LOTE, se debe abrir TSQL y buscar en la base de datos: SOFTLAND, una tabla con el nombre: **CANNYSHOP.LOTE**, para insertar los registros directamente de la hoja de excel (sin los encabezados) a la tabla de la base de datos. **Es posible que aparezca un error de duplicados al insertar, pero no es problema, solo se puede dar en aceptar a la ventana.**
 - ![image](https://github.com/vasga-floze/contingencias-nyc/assets/72711545/4cff4416-b6d3-4b07-833f-40e1f91c3787)
 - Luego de haber insertado los lotes en la BD, se puede proceder con el registro de compras en Softland.
 - Las compras se registran en el módulo de compras > Operaciones > Ordenes:
 > ![image](https://github.com/vasga-floze/contingencias-nyc/assets/72711545/673bca73-96f7-4a36-b903-c8583fef17c6)
 - Hacer click en nuevo
 > ![image](https://github.com/vasga-floze/contingencias-nyc/assets/72711545/9ef188f5-75ae-45d9-bb41-31a277bd2d06)
-- Los campos marcados en la siguiente captura son los que se deben modificar:
+- Los campos marcados en la siguiente captura son los que se deben modificar, guardar y cerrar la ventana:
 > ![image](https://github.com/vasga-floze/contingencias-nyc/assets/72711545/df2e97b0-42ad-4eaa-81f2-e6d331f423d2)
+- Ahora se debe regresar al excel que se estaba trabajando e ir a modificar la tercera hoja (ORDEN_COMPRA_LINEA). Se van a modificar las columnas que en su encabezado se han rellenado con color amarillo. La información que se va a reemplazar en dichas columnas está en la primera hoja.
+- Al finalizar la hoja ORDEN_COMPRA_LINEA, se debe abrir TSQL y buscar en la base de datos: SOFTLAND, una tabla con el nombre: **CANNYSHOP.ORDEN_COMPRA_LINEA**, para insertar los registros directamente de la hoja de excel (sin los encabezados) a la tabla de la base de datos.
+> ![image](https://github.com/vasga-floze/contingencias-nyc/assets/72711545/7cedb469-2325-4b3f-a13f-de7d12821a9a)
+- Ahora hay que volver a Softland y abrir nuevamente la orden de compra que se está trabajando.
+> ![image](https://github.com/vasga-floze/contingencias-nyc/assets/72711545/a80870c3-da73-45d5-b8d9-97f793f53779)
+-  Ir a la ficha de Líneas, donde ya debería cargar las líneas que se han insertado desde la base de datos.
+>  ![image](https://github.com/vasga-floze/contingencias-nyc/assets/72711545/41da6132-63b6-4a91-9f60-e6f66e9d3e5f)
+- Se debe verificar en la ficha de **Montos** que estos cuadren con el CCF.
+> ![image](https://github.com/vasga-floze/contingencias-nyc/assets/72711545/2f54d9eb-436e-408d-86bc-a390e7c5f55e)
+
 
 
 
