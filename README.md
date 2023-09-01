@@ -167,6 +167,7 @@ WHERE (CUADRO_VENTA.FECHA BETWEEN @StartDate AND @EndDate);
 
 
 ## COMO CARGAR ORDENES DE COMPRA Y EMBARQUE POR CCF
+### Orden de Compra
 - Se tiene una plantilla de excel que en la primera hoja contiene el desglose de los fardos facturados. Se debe identificar las líneas que corresponden a cada CCF, para ir realizando las ordenes de compra por cada CCF. (Por ahora se debe filtrar por cada artículo y fecha, para comparar con los CCF que sí esten cuadrando).
 > ![image](https://github.com/vasga-floze/contingencias-nyc/assets/72711545/3bde2e79-4481-4770-9464-0462987139b8)
 - Luego de haber identificado todas las líneas que corresponden a un CCF se debe completar la información en la segunda hoja(LOTE), se van a modificar las columnas que en su encabezado se han rellenado con color amarillo. La información que se va a reemplazar en dichas columnas está en la primera hoja.
@@ -189,6 +190,14 @@ WHERE (CUADRO_VENTA.FECHA BETWEEN @StartDate AND @EndDate);
 >  ![image](https://github.com/vasga-floze/contingencias-nyc/assets/72711545/41da6132-63b6-4a91-9f60-e6f66e9d3e5f)
 - Se debe verificar en la ficha de **Montos** que estos cuadren con el CCF.
 > ![image](https://github.com/vasga-floze/contingencias-nyc/assets/72711545/2f54d9eb-436e-408d-86bc-a390e7c5f55e)
+- Ahora solo faltaría aprobar la orden de compra:
+> ![image](https://github.com/vasga-floze/contingencias-nyc/assets/72711545/e3d5585d-feed-4a0d-9754-bb6cf3f8c606)
+- Continuar
+> ![image](https://github.com/vasga-floze/contingencias-nyc/assets/72711545/c4593121-1a01-4b01-ba1c-98a8be3a3f2e)
+### Embarque
+- Después de aprobar la orden de compra, se procede a la creación del embarque.
+
+
 
 
 
