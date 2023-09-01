@@ -227,8 +227,9 @@ WHERE (CUADRO_VENTA.FECHA BETWEEN @StartDate AND @EndDate);
 > ![image](https://github.com/vasga-floze/contingencias-nyc/assets/72711545/2d94ed40-59a1-44a3-ad91-68a7d68a6b55)
 - Se verifica contrastando con los CCF, que el importe y el Impuesto de Iva sea iguales. En caso de faltar o pasarse unos "centavitos" puede hacerse un ajuste, sumando o restando a algunas cantidades, las que sean más grandes de preferencia:
 > ![image](https://github.com/vasga-floze/contingencias-nyc/assets/72711545/8d780f6b-1038-4694-a2e9-9e3a11b6c186)
-- 
-
+- Se regresa a la ficha general para modificar los montos e igualar al CCF (guardar y salir):
+> ![image](https://github.com/vasga-floze/contingencias-nyc/assets/72711545/2f85fef0-e678-4a05-93d5-23612c6ef3c8)
+- Procede aplicar al inventario...
 
 
 
