@@ -200,7 +200,7 @@ WHERE (CUADRO_VENTA.FECHA BETWEEN @StartDate AND @EndDate);
 - Hacer click en nuevo embarque:
 > ![image](https://github.com/vasga-floze/contingencias-nyc/assets/72711545/6002b51a-8bd3-4f94-8ecb-0281c219e48c)
 - Completar lo campos que se han marcado con el cuadro rojo, al finalizar guardar y salir:
-> ![image](https://github.com/vasga-floze/contingencias-nyc/assets/72711545/19dcc6be-8e7c-427c-813a-52ce3717956a)
+> ![image](https://github.com/vasga-floze/contingencias-nyc/assets/72711545/a69b1ca4-b1fa-46b6-88f6-98d474990524)
 - Hacer clic en **cargar ordenes**:
 > ![image](https://github.com/vasga-floze/contingencias-nyc/assets/72711545/09703c77-18fc-4c56-9f5c-c76849bc71a3)
 -  Seleccionar en la ficha de filtro **la bodega y la orden** que se está cargando, luego en la ficha de **Líneas** seleccionar todas las fichas de la orden de compra y marcarlas con el cheque, luego hacer click en cargar y salir:
@@ -217,7 +217,7 @@ WHERE (CUADRO_VENTA.FECHA BETWEEN @StartDate AND @EndDate);
 > ![image](https://github.com/vasga-floze/contingencias-nyc/assets/72711545/e14f05e3-76da-495b-8743-aea00af7fc7f)
 - Luego vamos a la ficha de Costos y en el menú superior damos click a **Refrescar costos**. (Tener cuidado que no sea el botón de aplicar a inventario). 
 > ![image](https://github.com/vasga-floze/contingencias-nyc/assets/72711545/64219f85-232c-49f9-a91e-2b1980a43c10)
-- Luego de **Refrescar costos** se debe GUARDAR y ahora se va a habilitar la ficha de Factura:
+- Luego de **"Refrescar costos"** se debe GUARDAR y ahora se va a habilitar la ficha de Factura:
 > ![image](https://github.com/vasga-floze/contingencias-nyc/assets/72711545/ae98a26c-1755-4058-91e4-fe3efdbf75c6)
 - Configuración general de una factura:
 > ![image](https://github.com/vasga-floze/contingencias-nyc/assets/72711545/2241ff98-b33d-4074-9cbc-417d59b6db76)
@@ -225,7 +225,7 @@ WHERE (CUADRO_VENTA.FECHA BETWEEN @StartDate AND @EndDate);
 > ![image](https://github.com/vasga-floze/contingencias-nyc/assets/72711545/755b4535-9bfe-4ea5-994c-fff1a5141c5e)
 - Continuar
 > ![image](https://github.com/vasga-floze/contingencias-nyc/assets/72711545/2d94ed40-59a1-44a3-ad91-68a7d68a6b55)
-- Se verifica contrastando con los CCF, que el importe y el Impuesto de Iva sea iguales. En caso de faltar o pasarse unos "centavitos" puede hacerse un ajuste, sumando o restando a algunas cantidades, las que sean más grandes de preferencia:
+- Se verifica contrastando con los CCF, que el importe y el impuesto de IVA sea iguales. En caso de faltar o pasarse unos "centavitos" puede hacerse un ajuste, sumando o restando a algunas cantidades, las que sean más grandes de preferencia:
 > ![image](https://github.com/vasga-floze/contingencias-nyc/assets/72711545/8d780f6b-1038-4694-a2e9-9e3a11b6c186)
 - Se regresa a la ficha general para modificar los montos e igualar al CCF (guardar y salir):
 > ![image](https://github.com/vasga-floze/contingencias-nyc/assets/72711545/2f85fef0-e678-4a05-93d5-23612c6ef3c8)
