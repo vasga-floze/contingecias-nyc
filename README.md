@@ -1,6 +1,6 @@
 # CONTINGENCIAS
 ## COMO ACTUALIZAR UN CIERRE POR FALTA DE INGRESO DE LA VENTA (PARA CORREGIR DIFERENCIA)
-##### Consultar la tabla CIERRE_DET_PAGO:
+##### Consultar la tabla CIERRE_DET_PAGO :
 Cambiar el nombre de la base de datos por la base correcta [T_SANMIGUEL1]. En el where se debe modificar la fecha (NO cambiar la hora).  La fecha debe ser del día que se desea corregir.
 ```
 --En el where se debe modificar la fecha (NO cambiar la hora)
@@ -23,20 +23,20 @@ UPDATE [T_SANMIGUEL1].[CONSNY].[CIERRE_DET_PAGO] SET TOTAL_USUARIO = 721.4300000
 WHERE CreateDate BETWEEN '2023-09-12 00:00:00.000' AND '2023-09-12 23:59:00.000';
 
 ```
-> Ejemplo: 
+> Ejemplo: (Los datos marcados en rojo son los que se deben modificar de acuerdo a las necesidades de la tienda)
 > ![image](https://github.com/vasga-floze/contingencias-nyc/assets/72711545/e64fc879-1f09-44e2-91bd-ea3fe1304bb2)
 
 #### Consultar la tabla CIERRE_POS:
 ```
 SELECT TOP (1000) *
-  FROM [T_SANMIGUEL1].[CONSNY].[CIERRE_POS] 
-  WHERE FECHA_HORA BETWEEN '2023-09-12 00:00:00.000' AND '2023-09-12 23:59:00.000';
+FROM [T_SANMIGUEL1].[CONSNY].[CIERRE_POS] 
+WHERE FECHA_HORA BETWEEN '2023-09-12 00:00:00.000' AND '2023-09-12 23:59:00.000';
 ```
 
 ```
 UPDATE [T_SANMIGUEL1].[CONSNY].[CIERRE_POS] SET TOTAL_DIFERENCIA = 0.00000000  WHERE FECHA_HORA BETWEEN '2023-09-12 00:00:00.000' AND '2023-09-12 23:59:00.000';
 ```
-> Ejemplo:
+> Ejemplo: (Los datos marcados en rojo son los que se deben modificar de acuerdo a las necesidades de la tienda)
 > ![image](https://github.com/vasga-floze/contingencias-nyc/assets/72711545/905aee52-ef25-41b1-9647-e5f1cc11ae1b)
 
 ![descarga](https://github.com/vasga-floze/contingencias-nyc/assets/72711545/e6a78b4c-f4c7-4f00-a62a-3cd858fabc63)
