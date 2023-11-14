@@ -1,3 +1,7 @@
+<p align="right">
+  <img src="https://visitor-badge.laobi.icu/badge?page_id=vasga-floze.contingencias-nyc" alt="visitors">
+</p>
+
 # CONTINGENCIAS
 ## Script para reporte de ventas de libro de consumidor final. (Para nuevo formato de Hacienda)
 ```
